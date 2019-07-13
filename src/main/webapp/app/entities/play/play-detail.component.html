@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="play">
+            <h2><span jhiTranslate="project2App.play.detail.title">Play</span> {{play.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="project2App.play.movieId">Movie Id</span></dt>
+                <dd>
+                    <div *ngIf="play.movieId">
+                        <a [routerLink]="['/movie', play.movieId?.id, 'view']">{{play.movieId?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="project2App.play.actorId">Actor Id</span></dt>
+                <dd>
+                    <div *ngIf="play.actorId">
+                        <a [routerLink]="['/actor', play.actorId?.id, 'view']">{{play.actorId?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/play', play.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

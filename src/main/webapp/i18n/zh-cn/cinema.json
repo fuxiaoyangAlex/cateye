@@ -1,0 +1,23 @@
+{
+  "project2App": {
+    "cinema": {
+      "home": {
+        "title": "Cinemas",
+        "createLabel": "创建新 Cinema",
+        "createOrEditLabel": "创建或编辑 Cinema",
+        "notFound": "No Cinema found"
+      },
+      "created": "Cinema {{ param }} 创建成功",
+      "updated": "Cinema {{ param }} 更新成功",
+      "deleted": "Cinema {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Cinema {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Cinema"
+      },
+      "name": "Name",
+      "cityId": "City Id"
+    }
+  }
+}

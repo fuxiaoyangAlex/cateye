@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="actor">
+            <h2><span jhiTranslate="project2App.actor.detail.title">Actor</span> {{actor.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="project2App.actor.name">Name</span></dt>
+                <dd>
+                    <span>{{actor.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="project2App.actor.gender">Gender</span></dt>
+                <dd>
+                    <span>{{actor.gender}}</span>
+                </dd>
+                <dt><span jhiTranslate="project2App.actor.age">Age</span></dt>
+                <dd>
+                    <span>{{actor.age}}</span>
+                </dd>
+                <dt><span jhiTranslate="project2App.actor.nationality">Nationality</span></dt>
+                <dd>
+                    <span>{{actor.nationality}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/actor', actor.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

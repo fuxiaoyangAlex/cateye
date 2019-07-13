@@ -1,0 +1,43 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.aiyun.project2",
+      "nativeLanguage": "zh-cn"
+    },
+    "jhipsterVersion": "6.1.2",
+    "applicationType": "monolith",
+    "baseName": "project2",
+    "packageName": "com.aiyun.project2",
+    "packageFolder": "com/aiyun/project2",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "YzIxMjMwZmI3ZjQ3NDlmODdiZWZiZDhhZGFmZWMxNmM5NDdkZGRjYWUzZThlZDMwZjZkMTcxNWFlOWY0YjY4N2UzYzY3YmFhZmI1ZmE3MDQyN2VkY2IxNmJiODAzNWRjNWE3MTQ0ZGI1MDNkMzA1NjQwNjVjNzUwOWUxMjIzMmI=",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "zh-cn",
+    "languages": [
+      "zh-cn",
+      "en"
+    ]
+  }
+}

@@ -1,0 +1,117 @@
+/**
+*订单表
+*/
+entity Orders{
+ count Integer
+}
+
+/**
+*用户表
+*/
+entity Customer {
+    name String,
+    phone Integer,
+    gender String
+}
+
+/**
+*收藏表
+*/
+entity Collect {
+    date LocalDate
+}
+
+/**
+*电影类型表
+*/
+entity Variety {
+	 label String
+}
+
+/**
+*影院表
+*/
+entity Cinema{
+	 name String required
+}
+
+/**
+*放映安排表
+*/
+entity Round{
+	//上映时间
+	time ZonedDateTime,
+    //影片时长
+    duration Integer,
+    price Integer
+}
+
+/**
+*电影表
+*/
+entity Movie{
+    name String,
+    releaseDay Integer,
+    image String,
+    brief String
+}
+
+/**
+*导演表
+*/
+entity Director{
+	name String,
+    gender String,
+    age String
+}
+
+/**
+*城市表
+*/
+entity City{
+    parentId Integer,
+	name String,
+    rank Integer
+}
+
+/**
+*演出表
+*/
+entity Play{
+
+}
+
+/**
+*演员表
+*/
+entity Actor{
+	name String,
+    gender String,
+    age String,
+    nationality String
+}
+
+
+
+
+relationship ManyToOne {
+	Orders{movieId} to Movie,
+    Orders{customerId} to Customer,
+    Collect{moveId} to Movie,
+    Collect{customerId} to Customer,
+    Cinema{cityId} to City,
+	Round{cinemaId} to Cinema,
+    Round{movieId} to Movie,
+    Movie{directorId} to Director,
+    Movie{varietyId} to Variety,
+    Play{movieId} to Movie,
+    Play{actorId} to Actor,
+    
+}
+
+
+paginate all with pagination
+
+
+service all with serviceImpl
+

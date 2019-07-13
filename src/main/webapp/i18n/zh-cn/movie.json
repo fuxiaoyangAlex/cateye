@@ -1,0 +1,27 @@
+{
+  "project2App": {
+    "movie": {
+      "home": {
+        "title": "Movies",
+        "createLabel": "创建新 Movie",
+        "createOrEditLabel": "创建或编辑 Movie",
+        "notFound": "No Movie found"
+      },
+      "created": "Movie {{ param }} 创建成功",
+      "updated": "Movie {{ param }} 更新成功",
+      "deleted": "Movie {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Movie {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Movie"
+      },
+      "name": "Name",
+      "releaseDay": "Release Day",
+      "image": "Image",
+      "brief": "Brief",
+      "directorId": "Director Id",
+      "varietyId": "Variety Id"
+    }
+  }
+}

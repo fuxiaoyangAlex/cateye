@@ -1,0 +1,23 @@
+{
+  "project2App": {
+    "play": {
+      "home": {
+        "title": "Plays",
+        "createLabel": "创建新 Play",
+        "createOrEditLabel": "创建或编辑 Play",
+        "notFound": "No Play found"
+      },
+      "created": "Play {{ param }} 创建成功",
+      "updated": "Play {{ param }} 更新成功",
+      "deleted": "Play {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Play {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Play"
+      },
+      "movieId": "Movie Id",
+      "actorId": "Actor Id"
+    }
+  }
+}

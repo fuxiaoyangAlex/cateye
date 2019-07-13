@@ -1,0 +1,54 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-round-heading" jhiTranslate="project2App.round.home.createOrEditLabel">Create or edit a Round</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="project2App.round.time" for="field_time">Time</label>
+                    <div class="d-flex">
+                        <input id="field_time" type="datetime-local" class="form-control" name="time" formControlName="time" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="project2App.round.duration" for="field_duration">Duration</label>
+                    <input type="number" class="form-control" name="duration" id="field_duration"
+                           formControlName="duration"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="project2App.round.price" for="field_price">Price</label>
+                    <input type="number" class="form-control" name="price" id="field_price"
+                           formControlName="price"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="project2App.round.cinemaId" for="field_cinemaId">Cinema Id</label>
+                    <select class="form-control" id="field_cinemaId" name="cinemaId" formControlName="cinemaId">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="cinemaOption.id === editForm.get('cinemaId').value?.id ? editForm.get('cinemaId').value : cinemaOption" *ngFor="let cinemaOption of cinemas; trackBy: trackCinemaById">{{cinemaOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="project2App.round.movieId" for="field_movieId">Movie Id</label>
+                    <select class="form-control" id="field_movieId" name="movieId" formControlName="movieId">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="movieOption.id === editForm.get('movieId').value?.id ? editForm.get('movieId').value : movieOption" *ngFor="let movieOption of movies; trackBy: trackMovieById">{{movieOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

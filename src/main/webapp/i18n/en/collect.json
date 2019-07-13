@@ -1,0 +1,24 @@
+{
+  "project2App": {
+    "collect": {
+      "home": {
+        "title": "Collects",
+        "createLabel": "Create a new Collect",
+        "createOrEditLabel": "Create or edit a Collect",
+        "notFound": "No Collect found"
+      },
+      "created": "A new Collect is created with identifier {{ param }}",
+      "updated": "A Collect is updated with identifier {{ param }}",
+      "deleted": "A Collect is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Collect {{ id }}?"
+      },
+      "detail": {
+        "title": "Collect"
+      },
+      "date": "Date",
+      "moveId": "Move Id",
+      "customerId": "Customer Id"
+    }
+  }
+}

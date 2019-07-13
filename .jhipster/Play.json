@@ -1,0 +1,30 @@
+{
+    "name": "Play",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "movie",
+            "otherEntityRelationshipName": "play",
+            "relationshipName": "movieId",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "actor",
+            "otherEntityRelationshipName": "play",
+            "relationshipName": "actorId",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190713070455",
+    "javadoc": "演出表",
+    "entityTableName": "play",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

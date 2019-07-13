@@ -1,0 +1,20 @@
+{
+    "name": "Variety",
+    "fields": [
+        {
+            "fieldName": "label",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190713070449",
+    "javadoc": "电影类型表",
+    "entityTableName": "variety",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,43 @@
+{
+    "name": "Round",
+    "fields": [
+        {
+            "fieldName": "time",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "duration",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "price",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "cinema",
+            "otherEntityRelationshipName": "round",
+            "relationshipName": "cinemaId",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "movie",
+            "otherEntityRelationshipName": "round",
+            "relationshipName": "movieId",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190713070451",
+    "javadoc": "放映安排表",
+    "entityTableName": "round",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

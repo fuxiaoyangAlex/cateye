@@ -1,0 +1,26 @@
+{
+  "project2App": {
+    "round": {
+      "home": {
+        "title": "Rounds",
+        "createLabel": "创建新 Round",
+        "createOrEditLabel": "创建或编辑 Round",
+        "notFound": "No Round found"
+      },
+      "created": "Round {{ param }} 创建成功",
+      "updated": "Round {{ param }} 更新成功",
+      "deleted": "Round {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Round {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Round"
+      },
+      "time": "Time",
+      "duration": "Duration",
+      "price": "Price",
+      "cinemaId": "Cinema Id",
+      "movieId": "Movie Id"
+    }
+  }
+}

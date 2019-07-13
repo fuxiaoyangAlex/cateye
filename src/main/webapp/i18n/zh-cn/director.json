@@ -1,0 +1,24 @@
+{
+  "project2App": {
+    "director": {
+      "home": {
+        "title": "Directors",
+        "createLabel": "创建新 Director",
+        "createOrEditLabel": "创建或编辑 Director",
+        "notFound": "No Director found"
+      },
+      "created": "Director {{ param }} 创建成功",
+      "updated": "Director {{ param }} 更新成功",
+      "deleted": "Director {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Director {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Director"
+      },
+      "name": "Name",
+      "gender": "Gender",
+      "age": "Age"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "project2App": {
+    "city": {
+      "home": {
+        "title": "Cities",
+        "createLabel": "Create a new City",
+        "createOrEditLabel": "Create or edit a City",
+        "notFound": "No City found"
+      },
+      "created": "A new City is created with identifier {{ param }}",
+      "updated": "A City is updated with identifier {{ param }}",
+      "deleted": "A City is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete City {{ id }}?"
+      },
+      "detail": {
+        "title": "City"
+      },
+      "parentId": "Parent Id",
+      "name": "Name",
+      "rank": "Rank"
+    }
+  }
+}

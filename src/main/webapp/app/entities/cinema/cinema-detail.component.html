@@ -1,0 +1,33 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="cinema">
+            <h2><span jhiTranslate="project2App.cinema.detail.title">Cinema</span> {{cinema.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="project2App.cinema.name">Name</span></dt>
+                <dd>
+                    <span>{{cinema.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="project2App.cinema.cityId">City Id</span></dt>
+                <dd>
+                    <div *ngIf="cinema.cityId">
+                        <a [routerLink]="['/city', cinema.cityId?.id, 'view']">{{cinema.cityId?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/cinema', cinema.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

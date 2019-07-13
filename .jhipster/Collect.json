@@ -1,0 +1,35 @@
+{
+    "name": "Collect",
+    "fields": [
+        {
+            "fieldName": "date",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "movie",
+            "otherEntityRelationshipName": "collect",
+            "relationshipName": "moveId",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "customer",
+            "otherEntityRelationshipName": "collect",
+            "relationshipName": "customerId",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190713070448",
+    "javadoc": "收藏表",
+    "entityTableName": "collect",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,25 @@
+{
+  "project2App": {
+    "actor": {
+      "home": {
+        "title": "Actors",
+        "createLabel": "创建新 Actor",
+        "createOrEditLabel": "创建或编辑 Actor",
+        "notFound": "No Actor found"
+      },
+      "created": "Actor {{ param }} 创建成功",
+      "updated": "Actor {{ param }} 更新成功",
+      "deleted": "Actor {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Actor {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Actor"
+      },
+      "name": "Name",
+      "gender": "Gender",
+      "age": "Age",
+      "nationality": "Nationality"
+    }
+  }
+}

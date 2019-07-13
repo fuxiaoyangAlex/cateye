@@ -1,0 +1,35 @@
+{
+    "name": "Orders",
+    "fields": [
+        {
+            "fieldName": "count",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "movie",
+            "otherEntityRelationshipName": "orders",
+            "relationshipName": "movieId",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "customer",
+            "otherEntityRelationshipName": "orders",
+            "relationshipName": "customerId",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190713070446",
+    "javadoc": "订单表",
+    "entityTableName": "orders",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
