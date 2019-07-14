@@ -2,9 +2,12 @@ package com.aiyun.project2.service;
 
 import com.aiyun.project2.domain.Movie;
 
+import com.aiyun.project2.service.dto.MoiveCou1;
+import com.aiyun.project2.service.dto.MoiveCou2;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -43,4 +46,17 @@ public interface MovieService {
      * @param id the id of the entity.
      */
     void delete(Long id);
+
+    /**
+     * 统计各地区电影数据
+     * @return
+     * @throws Exception
+     */
+    List<MoiveCou1> findAllMovieCon1(String cityName) throws Exception;
+    /**
+     * 统计各地区电影数据(电影排片数量前五名)
+     * @return
+     * @throws Exception
+     */
+    List<MoiveCou2> findAllMovieCon2(String cityName) throws Exception;
 }

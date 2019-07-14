@@ -2,6 +2,8 @@ package com.aiyun.project2.web.rest;
 
 import com.aiyun.project2.domain.Movie;
 import com.aiyun.project2.service.MovieService;
+import com.aiyun.project2.service.dto.MoiveCou1;
+import com.aiyun.project2.service.dto.MoiveCou2;
 import com.aiyun.project2.web.rest.errors.BadRequestAlertException;
 
 import io.github.jhipster.web.util.HeaderUtil;
@@ -125,5 +127,18 @@ public class MovieResource {
         log.debug("REST request to delete Movie : {}", id);
         movieService.delete(id);
         return ResponseEntity.noContent().headers(HeaderUtil.createEntityDeletionAlert(applicationName, true, ENTITY_NAME, id.toString())).build();
+    }
+    @GetMapping("/movieCou1/{cityName}")
+    public ResponseEntity<List<MoiveCou1>> getAllMoiveCou1(@PathVariable String cityName) throws Exception {
+        log.debug("获取所有电影统计数据");
+        return ResponseEntity.ok(movieService.findAllMovieCon1(cityName));
+
+    }
+
+    @GetMapping("/movieCou2/{cityName}")
+    public ResponseEntity<List<MoiveCou2>> getAllMoiveCou2(@PathVariable String cityName) throws Exception {
+        log.debug("获取所有电影统计数据");
+        return ResponseEntity.ok(movieService.findAllMovieCon2(cityName));
+
     }
 }
